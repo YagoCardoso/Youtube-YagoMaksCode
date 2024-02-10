@@ -1,0 +1,82 @@
+::before, ::after, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 0,0.5);
+    font-family: "Inter",sans-serif;
+    nav{
+        height: 100px;
+        width: 100%;
+        background-color: lightseagreen;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .h1-name {
+            font: size 3rem;
+        }
+        .menu-hamburger{
+        display: none;
+        flex-direction: column;
+        width: 50px;
+        cursor: pointer;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        .line {
+            height: 8px;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            border-radius: 100vw;
+            margin: 5px;
+        }
+        }
+        .link-container{
+            list-style: none;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            .link {
+                padding: 1rem;
+                font-size: 1.5rem;
+                align-self: center;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                cursor: pointer;
+                &:hover {
+                    background-color: gray;
+                }
+            }
+           
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    body {
+        nav {
+         height: fit-content;
+         justify-content: flex-end;
+         .h1-name {
+            display: none;
+         }
+         .menu-hamburger {
+            display: flex;
+            margin: 0.5rem;
+         }
+         .link-container {
+            display: none;
+            &.active {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
+            }
+         }
+        }
+    }
+}
