@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    animation: changeImage 20s infinite;
+}
+
+nav {
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+}
+
+nav .menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pad: 0 20px;
+}
+
+.menu .logo img {
+    width: 300px;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+}
+
+.menu ul li a:hover {
+    background-image: linear-gradient(to right, #3f8cd6,#38deec);
+    color: black;
+}
+
+.header-btn button {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: 2px solid #3bbee3;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    color : #38deec
+}
+
+.header-btn button:hover {
+    background-image: linear-gradient(to right, #3f8cd6,#38deec);
+    color: black;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.container {
+    width: 1200px;
+    height: 85%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.div-title {
+    height: 80%;
+    display: flex;
+    align-items:  center;
+}
+
+.center {
+    width: 55%;
+}
+
+.center .title {
+    color: white;
+    font-size: 70px;
+    font-family: 'Reem Kufi Ink',sans-serif;
+}
+
+.center .sub_title {
+    color:white;
+    font-size: 18px;
+    font-weight: 20;
+    margin: 10px 0 25px 0;
+}
+
+.center .btn-content button {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(to right, #3f8cd6,#38deec);
+    color: black;
+}
+
+.center .btn-content button:hover {
+    border: 2px, solid #3bbee3;
+    color:#38deec;
+    background: transparent;
+}
+
+.checkbtn {
+    font-size:  30px;
+    color: white;
+    float: right;
+    line-height: normal;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.topBtn button {
+    display: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(to right, #3f8cd6,#38deec);
+    border: none;
+}
+
+/* Medias Queries*/
+@media (min-width: 1200px){
+    .menu ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1200px){
+    body {
+        background-image: url(img/kratos-responsive.png);
+    }
+    .menu ul li {
+        margin-left: 7px;
+        text-align: left;
+        padding-left: 60px;
+    }
+    li .topBtn{
+        padding: 0 15px;
+    }
+    .topBtn button {
+        display: block;
+    }
+    .container {
+        width: 100%;
+    }
+    .header-btn{
+        display: none;
+    }
+    .checkbtn {
+        display: none;
+    }
+    .center .title {
+        font-size: 40px;
+    }
+
+    .center {
+        width: 100%;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+    a:hover, a.active{
+        background: none;
+        color:#3f8cd6
+    }
+    #check:checked ~ ul{
+        left: -50px;
+    }
+}
+
+/*Function keyframes*/
+
+@keyframes changeImage {
+    0%{
+        background-image: url(img/kratos-4k1.png);
+    }
+    50%{
+        background-image: url(img/kratos-4k2.png);
+    }
+    100%{
+        background-image: url(img/kratos-4k3.png);
+    }
+}
